@@ -1,7 +1,7 @@
 
 # HRMS
 
-## Requerements
+## Requirements
 
 1. Spend Tracker
     - user can record their spendings
