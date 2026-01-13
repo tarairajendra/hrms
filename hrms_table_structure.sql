@@ -77,6 +77,9 @@ CREATE TABLE `attendance` (
   SPATIAL INDEX(location)
 );
 
+
+CREATE UNIQUE INDEX `expense_user_unique_index` ON `expense_splits` (`expense_id`, `user_id`);
+
 ALTER TABLE `attendance` ADD CONSTRAINT `fk_user_attendance` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 ALTER TABLE `biometrics` ADD CONSTRAINT `fk_user_biometrics` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
